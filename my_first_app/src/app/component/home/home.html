@@ -1,0 +1,28 @@
+<div class="container">
+
+  <h1 [ngClass]="['cls', 'cls2', 'cls3']">home works</h1>    <!-- ngClass -->
+
+
+
+    <h2 appChangeColor>Change color by hovering </h2>          <!-- Custom Directive -->
+
+    
+  <div>                                                              <!-- ngModel-->
+    <label> Student Name: </label>
+   <input type="text" [(ngModel)]="studentName">
+  </div>
+
+
+  <h1>Student Name: {{ studentName | uppercase }}</h1>        <!-- Pipe-->
+  <h2>TV Price: {{ tvprice | currency: 'INR'}}</h2>
+  <h3>Expiry Date = {{ expiryDate | date:'short' }}</h3>
+ 
+
+
+<p [ngStyle]="{'font-size.px': boxFontSize}">Original Text: {{ sampleText }}</p>          <!-- Custom Kebab-Case Pipe -->
+<p [ngStyle]="{'font-size.px': boxFontSize}">Kebab Case: {{ sampleText | kebabCase }}</p>
+<button (click)="increaseFont()">Increase Font</button>
+
+ </div>
+
+ 

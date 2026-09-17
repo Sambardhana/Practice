@@ -1,0 +1,28 @@
+<h2>Student Login</h2>
+
+<form>
+  <input type="text" placeholder="Enter your full name">
+  <br><br>
+  <input type="text" placeholder="Enter your reg. number">
+  <br><br>
+  <input type="text" placeholder="Enter your phone no.">
+  <br><br>
+  <input type="text" placeholder="Enter your Address">
+  <br><br>
+  
+  <select>
+    <option value="">Choose Course</option>
+    <option>Advance Java</option>
+    <option>SpringBoot</option>
+    <option>Angular</option>
+  </select>
+  <br><br>
+
+  <div>
+    <input type="checkbox" id="terms">
+    <label for="terms">I verify that all given details are correct</label>
+  </div>
+  <br>
+
+  <button type="button" (click)="onLoginSubmit()">Submit</button>
+</form>
