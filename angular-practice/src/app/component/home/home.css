@@ -1,0 +1,36 @@
+.container {
+  padding: 100px;
+  font-family: Arial, sans-serif;
+}
+
+p {
+  margin: 10px 0;
+  transition: font-size 0.2s ease-in-out;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #e81313;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #e10b0b;
+}
+
+.cls {
+  background-color: #f8d7da;
+}
+
+.cls2 {
+  color: #ea1026;
+}
+
+.cls3 {
+  border-left: 4px solid #f5c6cb;
+  padding-left: 100px;
+}

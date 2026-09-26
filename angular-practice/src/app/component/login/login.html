@@ -1,0 +1,188 @@
+<h2>Student Login</h2>
+
+<form #loginForm="ngForm" (ngSubmit)="onLoginSubmit()">
+
+  <!-- Full Name -->
+  <input
+    type="text"
+    name="fullName"
+    placeholder="Enter your full name"
+    ngModel
+    required
+    minlength="3"
+    #fullName="ngModel">
+
+  <div *ngIf="fullName.invalid && fullName.touched">
+    <small *ngIf="fullName.errors?.['required']">
+      Full name is required.
+    </small>
+
+    <small *ngIf="fullName.errors?.['minlength']">
+      Name must contain at least 3 characters.
+    </small>
+  </div>
+
+  <br><br>
+
+
+  <!-- Registration Number -->
+  <input
+    type="text"
+    name="regNo"
+    placeholder="Enter your reg. number"
+    ngModel
+    required
+    #regNo="ngModel">
+
+  <div *ngIf="regNo.invalid && regNo.touched">
+    <small>
+      Registration number is required.
+    </small>
+  </div>
+
+  <br><br>
+
+
+  <!-- Phone Number -->
+  <input
+    type="text"
+    name="phone"
+    placeholder="Enter your phone no."
+    ngModel
+    required
+    pattern="[0-9]{10}"
+    #phone="ngModel">
+
+  <div *ngIf="phone.invalid && phone.touched">
+
+    <small *ngIf="phone.errors?.['required']">
+      Phone number is required.
+    </small>
+
+    <small *ngIf="phone.errors?.['pattern']">
+      Enter a valid 10-digit phone number.
+    </small>
+
+  </div>
+
+  <br><br>
+
+
+  <!-- Address -->
+  <input
+    type="text"
+    name="address"
+    placeholder="Enter your Address"
+    ngModel
+    required
+    minlength="5"
+    #address="ngModel">
+
+  <div *ngIf="address.invalid && address.touched">
+
+    <small *ngIf="address.errors?.['required']">
+      Address is required.
+    </small>
+
+    <small *ngIf="address.errors?.['minlength']">
+      Address must contain at least 5 characters.
+    </small>
+
+  </div>
+
+  <br><br>
+
+
+  <!-- Course -->
+  <select
+    name="course"
+    ngModel
+    required
+    #course="ngModel">
+
+    <option value="">Choose Course</option>
+    <option>Advance Java</option>
+    <option>SpringBoot</option>
+    <option>Angular</option>
+
+  </select>
+
+  <div *ngIf="course.invalid && course.touched">
+    <small>
+      Please choose a course.
+    </small>
+  </div>
+
+  <br><br>
+
+
+  <!-- Terms -->
+  <div>
+
+    <input
+      type="checkbox"
+      id="terms"
+      name="terms"
+      ngModel
+      required>
+
+    <label for="terms">
+      I verify that all given details are correct
+    </label>
+
+  </div>
+
+  <br>
+
+
+  <!-- Submit -->
+  <button
+    type="submit"
+    [disabled]="loginForm.invalid">
+
+    Submit
+
+  </button>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h2>Student Login</h2>
+
+<form>
+  <input type="text" placeholder="Enter your full name">
+  <br><br>
+  <input type="text" placeholder="Enter your reg. number">
+  <br><br>
+  <input type="text" placeholder="Enter your phone no.">
+  <br><br>
+  <input type="text" placeholder="Enter your Address">
+  <br><br>
+  
+  <select>
+    <option value="">Choose Course</option>
+    <option>Advance Java</option>
+    <option>SpringBoot</option>
+    <option>Angular</option>
+  </select>
+  <br><br>
+
+  <div>
+    <input type="checkbox" id="terms">
+    <label for="terms">I verify that all given details are correct</label>
+  </div>
+  <br>
+
+  <button type="button" (click)="onLoginSubmit()">Submit</button>
+</form> -->
